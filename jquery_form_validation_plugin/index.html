@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8"/>
+<title>Form Validation using jQuery Validation Plugin by CodexWorld.com</title>
+<style type="text/css">
+.userform{width: 400px;}
+.userform p {
+    width: 100%;
+}
+.userform label {
+    width: 120px;
+    color: #333;
+    float: left;
+}
+input.error {
+    border: 1px dotted red;
+}
+label.error{
+    width: 100%;
+    color: red;
+    font-style: italic;
+    margin-left: 120px;
+    margin-bottom: 5px;
+}
+.userform input.submit {
+    margin-left: 120px;
+}
+</style>
+<script src="jquery.min.js"></script>
+<script src="jquery.validate.js"></script>
+<script>
+$.validator.setDefaults({
+    submitHandler: function() {
+        alert("submitted!");
+    }
+});
+
+$(document).ready(function() {
+    $("#userForm").validate({
+        rules: {
+            name: "required",
+            email: {
+                required: true,
+                email: true
+            },
+            phone: {
+                required: true,
+                number: true
+            },
+            url: {
+                required: false,
+                url: true
+            },
+            username: {
+                required: true,
+                minlength: 6
+            },
+            password: {
+                required: true,
+                minlength: 6
+            },
+            confirm_password: {
+                required: true,
+                minlength: 6,
+                equalTo: "#password"
+            },
+            agree: "required"
+        },
+        messages: {
+            name: "Please enter your name",
+            email: "Please enter a valid email address",
+            phone: {
+                required: "Please enter your phone number",
+                number: "Please enter only numeric value"
+            },
+            url: {
+                url: "Please enter valid url"
+            },
+            username: {
+                required: "Please enter a username",
+                minlength: "Your username must consist of at least 6 characters"
+            },
+            password: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 6 characters long"
+            },
+            confirm_password: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 6 characters long",
+                equalTo: "Please enter the same password as above"
+            },
+            agree: "Please accept our policy"
+        }
+    });
+});
+</script>
+</head>
+<body>
+<h1>Form Validation using jQuery Validation Plugin by CodexWorld.com</h1>
+<form class="userform" id="userForm" method="post" action="">
+    <fieldset>
+        <legend>Please provide the following details</legend>
+        <p>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" >
+        </p>
+        <p>
+            <label for="email">E-Mail</label>
+            <input id="email" type="email" name="email" >
+        </p>
+        <p>
+            <label for="phone">Phone</label>
+            <input id="phone" type="phone" name="phone" >
+        </p>
+        <p>
+            <label for="url">URL</label>
+            <input id="url" type="url" name="url">
+        </p>
+        <p>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text">
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+        </p>
+        <p>
+            <label for="confirm_password">Confirm password</label>
+            <input id="confirm_password" name="confirm_password" type="password">
+        </p>
+        <p>
+            <label for="agree">Please agree to our policy</label>
+            <input type="checkbox" class="checkbox" id="agree" name="agree">
+        </p>
+        <p>
+            <input class="submit" type="submit" value="Submit">
+        </p>
+    </fieldset>
+</form>
+</body>
+</html>
