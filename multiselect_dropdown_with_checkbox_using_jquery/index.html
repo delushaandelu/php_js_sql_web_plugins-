@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Multi-select Dropdown List with Checkbox by CodexWorld</title>
+<link href="jquery.multiselect.css" rel="stylesheet" type="text/css">
+<style>
+body { font-family:'Open Sans' Arial, Helvetica, sans-serif}
+ul,li { margin:0; padding:0; list-style:none;}
+.label { color:#000; font-size:16px;}
+</style>
+</head>
+<body>
+    
+<h2>jQuery MultiSelect Basic Uses</h2>
+<select name="langOpt[]" multiple id="langOpt">
+<option value="C++">C++</option>
+<option value="C#">C#</option>
+<option value="Java">Java</option>
+<option value="Objective-C">Objective-C</option>
+<option value="JavaScript">JavaScript</option>
+<option value="Perl">Perl</option>
+<option value="PHP">PHP</option>
+<option value="Ruby on Rails">Ruby on Rails</option>
+<option value="Android">Android</option>
+<option value="iOS">iOS</option>
+<option value="HTML">HTML</option>
+<option value="XML">XML</option>
+</select>
+
+<h2>jQuery MultiSelect With Search Option</h2>
+<select name="langOpt2[]" multiple id="langOpt2">
+<option value="C++">C++</option>
+<option value="C#">C#</option>
+<option value="Java">Java</option>
+<option value="Objective-C">Objective-C</option>
+<option value="JavaScript">JavaScript</option>
+<option value="Perl">Perl</option>
+<option value="PHP">PHP</option>
+<option value="Ruby on Rails">Ruby on Rails</option>
+<option value="Android">Android</option>
+<option value="iOS">iOS</option>
+<option value="HTML">HTML</option>
+<option value="XML">XML</option>
+</select>
+
+<h2>jQuery MultiSelect With Select All Option</h2>
+<select name="langOpt3[]" multiple id="langOpt3">
+<option value="C++">C++</option>
+<option value="C#">C#</option>
+<option value="Java">Java</option>
+<option value="Objective-C">Objective-C</option>
+<option value="JavaScript">JavaScript</option>
+<option value="Perl">Perl</option>
+<option value="PHP">PHP</option>
+<option value="Ruby on Rails">Ruby on Rails</option>
+<option value="Android">Android</option>
+<option value="iOS">iOS</option>
+<option value="HTML">HTML</option>
+<option value="XML">XML</option>
+</select>
+
+<h2>jQuery MultiSelect With Optgroup</h2>
+<select name="langOptgroup[]" multiple id="langOptgroup">
+    <optgroup label="Programming Languages">
+        <option value="C++ / C#">C++ / C#</option>
+        <option value="Java">Java</option>
+        <option value="Objective-C">Objective-C</option>
+    </optgroup>
+    <optgroup label="Client-side scripting Languages">
+        <option value="JavaScript">JavaScript</option>
+    </optgroup>
+    <optgroup label="Server-side scripting Languages">
+        <option value="Perl">Perl</option>
+        <option value="PHP">PHP</option>
+        <option value="Ruby on Rails">Ruby on Rails</option>
+    </optgroup>
+    <optgroup label="Mobile Platforms">
+        <option value="Android">Android</option>
+        <option value="iOS">iOS</option>
+    </optgroup>
+    <optgroup label="Document Markup Languages">
+        <option value="HTML">HTML</option>
+        <option value="XML">XML</option>
+    </optgroup>
+</select>
+
+
+
+<script src="jquery.min.js"></script>
+<script src="jquery.multiselect.js"></script>
+<script>
+$('#langOpt').multiselect({
+    columns: 1,
+    placeholder: 'Select Languages'
+});
+
+$('#langOpt2').multiselect({
+    columns: 1,
+    placeholder: 'Select Languages',
+    search: true
+});
+
+$('#langOpt3').multiselect({
+    columns: 1,
+    placeholder: 'Select Languages',
+    search: true,
+    selectAll: true
+});
+
+$('#langOptgroup').multiselect({
+    columns: 4,
+    placeholder: 'Select Languages',
+    search: true,
+    selectAll: true
+});
+</script>
+</body>
+</html>
