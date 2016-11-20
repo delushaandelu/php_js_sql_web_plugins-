@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>How to Print Page Area using JavaScript by CodexWorld.com</title>
+<script>
+function printPageArea(areaID){
+	var printContent = document.getElementById(areaID);
+	var WinPrint = window.open('', '', 'width=900,height=650');
+	WinPrint.document.write(printContent.innerHTML);
+	WinPrint.document.close();
+	WinPrint.focus();
+	WinPrint.print();
+	WinPrint.close();
+}
+</script>
+    </head>
+<body>
+<div id="wrapper" style="width: 1000px;border: solid 2px #333;padding: 10px;">
+	<div style="width: 1000px;float: left;">
+		<a href="javascript:void(0);" id="print_button1" style="width: 120px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #02A6D8;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('wrapper')">Print Full Content</a>
+		<a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #02A6D8;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('content')">Print Main Content</a>
+	</div>
+	<div id="header" style="width: 950px;height: 80px;border: solid 2px #333;text-align: center; padding: 5px;margin:45px 20px 20px 20px;">
+		<h1>This is a header section</h1>
+	</div>
+	<div id="content" style="width: 950px;height: 300px;border: solid 2px #333;text-align: center; padding: 5px;margin: 20px;">
+		<h1>This is a main content section</h1>
+		<div> 
+			<img src="screencapture-codexworld-com.png" style="float: left;overflow: hidden;width: 200px;margin-right: 15px;margin-bottom: 8px;">
+			<p style="text-align: left;">CodexWorld was formed to provide web developers and programmers with a single destination to get web development and programming resources. Our mission is to provide developers with all resources they need to help them in their day to day programming, as well as helping them keep up to date with the latest technologies. Learn PHP, MySQL, JavaScript, jQuery, Ajax, WordPress, Drupal, CodeIgniter, CakePHP, Web Development with CodexWorld tutorials. View live demo and download scripts.</p>
+		</div>
+	</div>
+	<div id="footer" style="width: 950px;height: 80px;border: solid 2px #333;text-align: center; padding: 5px;margin: 20px;">
+		<h1>This is a footer section</h1>
+	</div>
+</div>
+</body>
+</html>
