@@ -1,0 +1,88 @@
+.tweet-box{
+	width: 25%;
+	border: 1px solid #e8e8e8;
+	max-width: 520px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.tweet-box h1 {
+	font-family: 'Arial Black', Gadget, sans-serif;
+	font-size:18px;
+	color: #444;
+	border-bottom: 1px solid #E5E5E5;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.tweets-widget {
+    list-style: none;
+	max-height: 450px;
+	position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.tweets-widget ul {
+    margin-bottom: 0px;
+	padding-left: 0;
+    width: 100%;
+}
+.tweet-wrapper {
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 15px;
+    width: 97%;
+	margin-bottom: 15px;
+    overflow: hidden;
+	padding-left: 10px;
+}
+.tweet-wrapper:last-child {
+    border-bottom: none;
+	margin-bottom: 0px;
+}
+.tweet-thumb {
+    float: left;
+    margin-right: 15px;
+}
+.tweets-widget a {
+    color: #222222;
+    text-decoration: none;
+    line-height: inherit;
+    -webkit-transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s;
+    -moz-transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s;
+    -o-transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s;
+    -ms-transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s;
+    transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s;
+}
+h3.title a{color: #4c9fe1;}
+h3.title a:hover{text-decoration: underline;}
+.tweets-widget img {
+    max-width: 100%;
+	border: 0;
+    vertical-align: middle;
+    height: auto;
+	background: #fff;
+    display: block;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+.tweet-content {
+    overflow: hidden;
+}
+.tweet-content .title {
+    margin-top: -3px;
+    margin-bottom: 0px;
+    line-height: 19px;
+	 font-size: 14px;
+    margin-bottom: 2px;
+	font-family: 'Arial';
+    font-style: normal;
+    font-weight: normal;
+}
+.tweet-content .title {
+    font-style: normal;
+}
+.tweet-content .meta {
+    font-size: 11px;
+    color: #929292;
+}
