@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Display Loading Image While Page Loads using jQuery and CSS by CodexWorld</title>
+<style>
+p{font-size: 40px;}
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('pageLoader.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+	$(".loader").fadeOut("slow");
+});
+</script>
+</head>
+<body>
+    <div class="loader"></div>
+    <h2>Display Loading Image While Page Loads using jQuery and CSS by CodexWorld</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer orci nunc, congue id lectus nec, ultricies sodales mi. Mauris tristique varius venenatis. Sed laoreet aliquam nisl eu vulputate. Donec non ex ac justo mattis fermentum. Nunc molestie enim sit amet augue gravida, non scelerisque lacus elementum. Mauris venenatis sit amet lectus non commodo. Sed convallis porta leo eu tincidunt. Cras augue quam, aliquet ac eros eget, ultricies tincidunt sem.</p>
+
+    <p>Pellentesque ornare accumsan blandit. Nulla iaculis augue urna, ac rutrum ante ultricies vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam ut massa maximus, dignissim felis nec, vehicula justo. Cras ullamcorper quis justo sed eleifend. Maecenas mattis consequat elementum. Integer gravida, purus sed placerat scelerisque, sapien felis gravida sem, quis fermentum lorem turpis eget lectus. Nulla fermentum, est aliquet dignissim ultrices, urna dui placerat ipsum, non faucibus nisi orci vitae nisi. Sed iaculis orci sit amet vehicula tempus. Vivamus sodales dui vel nulla facilisis, rutrum egestas lorem maximus. Ut at dolor sit amet ipsum congue tincidunt. Mauris at neque eget ante auctor dictum. Nulla accumsan interdum lobortis. Vivamus egestas viverra arcu, gravida bibendum tortor aliquam id.</p>
+
+    <p>Praesent ullamcorper est suscipit lacus gravida aliquet. Fusce ut diam sit amet lacus efficitur semper. Vivamus vel varius mi, et ultrices purus. Morbi tincidunt urna a ante laoreet, eu pretium metus varius. Vestibulum vestibulum gravida leo vitae auctor. Vivamus fringilla eget quam non aliquam. Fusce ultricies accumsan gravida.</p>
+</body>
+</html>
