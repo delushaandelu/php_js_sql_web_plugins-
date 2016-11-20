@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Social popup on page scroll</title>
+<style type="text/css">
+/* page text content css */
+h1{font-size:45px;text-align:center; text-decoration:underline;}
+h3{font-size:40px;color:#FA0530}
+p{font-size:40px;}
+
+/* popup css*/
+#spopup{
+	background:#f3f3f3;
+	border-radius:9px;
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	-moz-box-shadow:inset 0 0 3px #333;
+	-webkit-box-shadow:inset 0 0 3px #333;
+	box-shadow:inner 0 0 3px #333;
+	padding:12px 14px 12px 14px;
+	width:300px;
+	position:fixed;
+	bottom:13px;
+	right:2px;
+	display:none;
+	z-index:90;
+}
+</style>
+<script src="jquery.min.js"></script>
+<script type="text/javascript" async >
+$(window).scroll(function(){
+	if($(document).scrollTop()>=$(document).height()/5)
+		$("#spopup").show("slow");else $("#spopup").hide("slow");
+});
+function closeSPopup(){
+	$('#spopup').hide('slow');
+}
+</script>
+</head>
+
+<body>
+
+<!-- Page contents start -->
+<div class="content">
+	<h1>Social Buttons Popup on Page Scroll Using jQuery and CSS</h1>
+    <h3>Scroll down the page, the social popup would be appear at the right side corner. All the social buttons are displayed at this popup.</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare facilisis risus venenatis mattis. Fusce convallis vehicula dui sed rhoncus. Donec lorem velit, bibendum ac libero in, feugiat dapibus eros. Donec faucibus enim ac ligula tempus, vitae dignissim felis fermentum. Curabitur lectus orci, tincidunt sit amet ornare ac, scelerisque quis ligula. Nunc iaculis ligula non gravida consequat. Curabitur efficitur placerat odio. Aliquam ut aliquet nunc, in mollis purus. Morbi id orci ut odio suscipit placerat eu suscipit justo. Sed condimentum ligula eu odio bibendum, ac convallis erat finibus.</p>
+    
+    <p>Fusce pellentesque, dui eget auctor luctus, nisl orci aliquam tortor, in blandit mi nulla at urna. Maecenas felis leo, ullamcorper sed vehicula quis, tincidunt non nisi. Praesent iaculis lacus nec commodo facilisis. Sed sagittis ipsum vel cursus venenatis. Mauris dapibus commodo blandit. In tristique diam sem, quis vulputate quam congue sed. Sed cursus nulla a lectus hendrerit ultricies. In vulputate feugiat mauris. Nullam suscipit sed nisl nec facilisis. Nulla luctus justo id semper accumsan. Ut ultricies nisl et cursus convallis. Sed vel arcu ac eros tristique posuere eget ac nibh.</p>
+    
+    <p>Vivamus placerat leo id turpis varius, sit amet vehicula sapien pretium. Etiam quam est, viverra at dui nec, tincidunt volutpat elit. Vestibulum varius velit ut imperdiet tincidunt. Sed venenatis sem sit amet rhoncus hendrerit. Mauris eu accumsan ante. Mauris in accumsan purus. Sed blandit vehicula pharetra. Donec a vehicula elit, sed auctor lectus. Morbi lobortis tempus nulla, sed sollicitudin libero porttitor eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed convallis arcu vitae sem pulvinar mattis. Duis ac enim dui. Sed et eros pellentesque, bibendum est id, tincidunt mi.</p>
+    
+    <p>Sed ut varius lorem. Duis ac ex sagittis, facilisis eros eu, venenatis quam. Pellentesque sed nunc dui. Praesent scelerisque urna at enim condimentum faucibus. Proin pharetra pellentesque enim, in suscipit neque. Sed sit amet felis nunc. Curabitur eu urna elementum, congue lectus vel, feugiat enim. Nunc commodo euismod metus vitae lobortis. Nullam sit amet ullamcorper justo.</p>
+    
+    <p>Integer justo neque, rhoncus ac convallis vel, consequat placerat ex. Curabitur vitae purus velit. Integer consectetur laoreet elit a rhoncus. Phasellus interdum metus sit amet nulla faucibus, id pretium mi fermentum. Nunc iaculis dictum fringilla. Quisque vestibulum velit felis, in accumsan lacus sodales at. Maecenas feugiat erat non odio bibendum pharetra. Nunc porttitor egestas nisl. Integer molestie rutrum nisi id tincidunt. Fusce nec rhoncus justo. Praesent dictum sapien ultricies neque porttitor, eu volutpat metus dignissim.</p>
+    
+    <p>Duis gravida ipsum tortor, in cursus orci pretium at. Pellentesque eu odio nibh. Vivamus eget metus ac urna sagittis vestibulum vitae id tortor. Suspendisse vel congue ligula. Mauris ornare euismod est, non posuere ex placerat ac. Etiam convallis consectetur mollis. Integer ornare lobortis nunc, vitae gravida lectus lobortis et.</p>
+    
+    <p>Integer interdum imperdiet lacus, nec elementum ipsum ultrices ac. Integer nisi massa, vestibulum ut enim ut, blandit scelerisque urna. Integer vel ipsum id turpis rhoncus consequat. Ut mi lorem, tristique luctus viverra ac, vestibulum ac lacus. Donec tristique hendrerit augue, ac ultrices velit faucibus vitae. Mauris blandit purus vel orci dignissim finibus. Maecenas euismod mi at purus laoreet, auctor malesuada tellus tincidunt. Vivamus maximus nunc ut vestibulum pulvinar. Sed aliquam ac arcu non gravida. Vestibulum malesuada a lectus sit amet interdum. In hac habitasse platea dictumst. Phasellus pellentesque cursus ipsum in consectetur. Cras volutpat tellus nisi, ac cursus ex scelerisque in.</p>
+</div>
+<!-- Page contents end -->
+
+<!-- Popup Div Content Start -->
+<div id="spopup" style="display: none;">
+	<!-- popup close button -->
+	<a style="position:absolute;top:14px;right:10px;color:#555;font-size:10px;font-weight:bold;" href="javascript:void(0);" onClick="return closeSPopup();">
+    	<img src="ico-x.png" width="18" height="18"/>
+  	</a>
+	<span style="font-size:14px;text-shadow:1px 1px 0 #fff;font-family: 'brandon-grotesque', Helvetica, Arial, sans-serif;">Don't forget to join our community!</span>
+    <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fcodexworld&amp;width&amp;height=62&amp;colorscheme=light&amp;show_faces=false&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=374376776049353" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:62px; width:100%;" allowTransparency="true"></iframe>
+	<br>
+	<div style="margin-left:11px; margin-bottom:10px;">
+    	<div class="g-plusone" data-size="tall" data-annotation="inline" data-width="450" data-href="https://plus.google.com/+codexworld"></div>
+  	</div>
+	<iframe allowtransparency="true" frameborder="0" scrolling="no" src="//platform.twitter.com/widgets/follow_button.html?screen_name=codexworldlabs&amp;data-show-count=true" style="width:100%; height:20px;"></iframe>
+</div>
+<!-- Popup Div Content End -->
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript" async >
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</body>
+</html>
